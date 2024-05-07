@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <title>Assignment on JavaScript objects</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // Question 1: Create an object representing a car with properties like make, model, and year. Add a method to the car object that displays information about the car.Create two instances of the car object and call the method on each.
+
+    const car = {
+        make: "Benz",
+        model: "Glk",
+        year: 2011,
+        displayInfo: function() {
+            console.log(`This car is a ${this.make} ${this.model} from ${this.year}`)
+        }
+    }
+    car.displayInfo();
+
+    // Question 2: Create an object representing a student with properties name, age, and grades (an array of numbers). Add a method to the student object that calculates and returns the average grade. Create two instances of the student object with different grades and display their average grades.
+
+    const student = {
+        name: "Oladele",
+        age: 33,
+        grades: [90, 80, 80, 60],
+        averageGrades: function() {
+            let sum = 0;
+            for (let i = 0; i < this.grades.length; i++) {
+                sum += this.grades[i];
+            }
+            return sum / this.grades.length;
+            console.log(sum / this.grades.length);
+        } 
+    }
